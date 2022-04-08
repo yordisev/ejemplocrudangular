@@ -1,1 +1,52 @@
-<p>usuarios works!</p>
+
+<!-- <input type="hidden" #selection> -->
+<button class="button button1" (click)="selection = 'listar'">listar Usuarios</button>
+<button class="button button1" (click)="selection = 'agregar'">Registrar</button>
+<div [ngSwitch]="selection">
+    <div *ngSwitchCase="'agregar'" ngHide="editarequipo">
+        <h1>Crear Usuarios</h1>
+        <form action="">
+            <label for="nombre">Tipo Documento</label>
+            <input type="text" [(ngModel)]="usuarios.tipoDoc" name="tipoDoc">
+            <label for="nombre">Usuario</label>
+            <input type="text" [(ngModel)]="usuarios.usuario" name="usuario">
+            <label for="nombre">Contraseña</label>
+            <input type="text" [(ngModel)]="usuarios.contrasena" name="contrasena">
+            <label for="nombre">Numero Documento</label>
+            <input type="text" [(ngModel)]="usuarios.numDoc" name="numDoc">
+            <label for="nombre">Nombres</label>
+            <input type="text" [(ngModel)]="usuarios.nombres" name="nombre">
+            <label for="lname">Apellidos</label>
+            <input type="text" [(ngModel)]="usuarios.apellidos" name="apellido">
+            <label for="lname">Estado</label>
+            <input type="text" [(ngModel)]="usuarios.estado" name="estado">
+            <label for="lname">Nivel de acceso</label>
+            <input type="text" [(ngModel)]="usuarios.nivel" name="nivel_acceso">
+            <button class="button button1" (click)="GuardarUsuario()">Guardar</button>
+          </form>
+    </div>
+    
+    <div *ngSwitchDefault>
+        <h1>Listar Usuarios</h1>
+        <table id="customers">
+          <tr>
+            <th>NUMERO</th>
+            <th>USUARIO</th>
+            <th>NOMBRES</th>
+            <th>ESTADO</th>
+            <th>NIVEL</th>
+            <th>ACCIONES</th>
+          </tr>
+          <tr *ngFor="let usuario of listausuarios">
+            <td>{{usuario.id_admin}}</td>
+            <td>{{usuario.nombres}}</td>
+            <td>{{usuario.apellidos}}</td>
+            <td>{{usuario.estado}}</td>
+            <td>{{usuario.nivel}}</td>
+            <td><button class="btn btn-danger" (click)="llamarusuario(usuario.id_admin)">editar
+              </button></td>
+          </tr>
+        </table>
+    </div>
+</div>
+
