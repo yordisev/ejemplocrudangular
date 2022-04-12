@@ -12,13 +12,21 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 
 // servicios //
 import { ClientesService } from './servicios/clientes.service';
+import { ModulosComponent } from './modulos/modulos.component';
+import { LoginComponent } from './login/login.component';
+import { InicioComponent } from './modulos/inicio/inicio.component';
+import { NopagefoundComponent } from './modulos/nopagefound/nopagefound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientesComponent,
     UsuariosComponent,
-    SidebarComponent
+    SidebarComponent,
+    ModulosComponent,
+    LoginComponent,
+    InicioComponent,
+    NopagefoundComponent,
   ],
   imports: [
     BrowserModule,

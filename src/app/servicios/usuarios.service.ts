@@ -9,8 +9,8 @@ import { Observable } from 'rxjs';
 export class UsuariosService {
   constructor(private http: HttpClient) { }
 
-  // API_URI = 'http://localhost/api/usuarios/usuarios';
-  API_URI = 'http://localhost/apiangular/usuarios/usuarios';
+  API_URI = 'http://localhost/api/usuarios/usuarios';
+  // API_URI = 'http://localhost/apiangular/usuarios/usuarios';
 
   
   getUsuarios() {
