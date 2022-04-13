@@ -14,8 +14,8 @@ export class LoginComponent implements OnInit {
   constructor(private loginService: LoginService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   login: Login = {
-    usuario: '',
-    contrasena: ''
+    usuario: 'yordis',
+    contrasena: 'yordis'
   }
 
   ngOnInit(): void {
