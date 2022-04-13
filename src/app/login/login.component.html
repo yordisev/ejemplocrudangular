@@ -2,19 +2,19 @@
 
     <h2>Login Form</h2>
     
-    <form action="/action_page.php" method="post">
+    <form  >
       <div class="imgcontainer">
         <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar">
       </div>
     
       <div class="container">
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
+        <label for="usuario"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" [(ngModel)]="login.usuario" name="usuario" required>
     
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <label for="contrasena"><b>Contraseña</b></label>
+        <input type="password" placeholder="Enter Password" [(ngModel)]="login.contrasena" name="contrasena" required>
             
-        <button type="submit">Login</button>
+        <button type="button" class="btn btn-primary"(click)="IniciarSession()">Login</button>
         <label>
           <input type="checkbox" checked="checked" name="remember"> Remember me
         </label>

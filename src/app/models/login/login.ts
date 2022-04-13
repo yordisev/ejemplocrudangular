@@ -1,12 +1,5 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+export interface Login {
+  usuario?: string,
+  contrasena?: string
 
-
-
-@NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
-})
-export class LoginModule { }
+};
