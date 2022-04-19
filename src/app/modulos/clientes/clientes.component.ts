@@ -11,14 +11,14 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./clientes.component.css']
 })
 export class ClientesComponent implements OnInit {
+  constructor(private router: Router,private ActivatedRoute:ActivatedRoute,private ClientesService:ClientesService) { }
 
   Cliente:Clientes = {
     nombre:'',
     apellido:'',
   };
 
-  constructor(private router: Router,private ActivatedRoute:ActivatedRoute,private ClientesService:ClientesService) { }
-
+  seleccionaritem = 'listar';
   ngOnInit(): void {
   }
 

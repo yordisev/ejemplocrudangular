@@ -29,3 +29,7 @@ input[type=text] {
     color: black;
     border: 2px solid #008CBA;
   }
+
+  .contenedor{
+    margin-top: 5%;
+  }

@@ -1,8 +1,24 @@
-<h1>Clientes</h1>
-<form action="">
-    <label for="nombre">Nombre</label>
-    <input type="text" [(ngModel)]="Cliente.nombre" name="nombre">
-    <label for="lname">Apellido</label>
-    <input type="text" [(ngModel)]="Cliente.apellido" name="apellido">
-    <button class="button button1" (click)="GuardarCliente()">Guardar</button>
-  </form>
+<div class="contenedor">
+  <h1>Clientes</h1>
+  <div [ngSwitch]="seleccionaritem">
+    <div *ngSwitchCase="'agregar'">
+      <form action="">
+          <label for="nombre">Nombre</label>
+          <input type="text" [(ngModel)]="Cliente.nombre" name="nombre">
+          <label for="lname">Apellido</label>
+          <input type="text" [(ngModel)]="Cliente.apellido" name="apellido">
+          <button class="button button1" (click)="GuardarCliente()">Guardar</button>
+          <button class="button button1" (click)="seleccionaritem = 'listar'">regresar</button>
+        </form>
+    </div>
+    <div *ngSwitchCase="'editar'">
+      <h1>prueba</h1>
+      <button class="button button1" (click)="seleccionaritem = 'listar'">regresar</button>
+    </div>
+    <div *ngSwitchDefault>
+      <!-- <button class="button button1" (click)="seleccionaritem = 'listar'">listar Usuarios</button> -->
+      <button class="button button1" (click)="seleccionaritem = 'agregar'">Registrar</button>
+      <button class="button button1" (click)="seleccionaritem = 'editar'">Editar</button>
+    </div>
+</div>
+</div>
