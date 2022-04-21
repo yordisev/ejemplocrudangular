@@ -11,6 +11,7 @@ export class LoginService {
 
   Iniciasesion(login: Login) {
     var datos = {
+        ruta:'autorizacion/login',
         function: 'Login',
         datos: login
       }
